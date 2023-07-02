@@ -2,7 +2,7 @@ import React from 'react'
 
 const biodata2 = () => {
   return (
-    <div>biodata iwan</div>
+    <div><h1>biodata iwan</h1></div>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const name = () => {
   return (
-    <div>nama saya adalah...</div>
+    <div><h1>nama saya adalah...</h1></div>
   )
 }
 

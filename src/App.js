@@ -1,28 +1,25 @@
-import DefaultNavbar from './navbar/navbar';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Navbar from './navbar/navbar';
+import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom';
 import Home from './pages/home'
 import Nama from './pages/name'
 import BiodataPannur from './pages/biodata1'
 import BiodataIwan from './pages/biodata2'
 import Contact from './pages/contact'
 import './App.css';
+import React from 'react';
 
 function App() {
   return (
-    <div>
-     <DefaultNavbar/>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />}/>
-          <Route path="/home" element={<Home />}/>
-          <Route path="/nama" element={<Nama />}/>
-          <Route path="/Biodata1" element={<BiodataPannur />}/>
-          <Route path="/Biodata2" element={<BiodataIwan />}/>
-          <Route path="/Contact" element={<Contact />}/>
-
+    <Router>
+      <Navbar />
+      <Routes>
+          <Route exact path="/" component={Home}/>
+          <Route path="/nama" component={Nama}/>
+          <Route path="/Biodata1" component={BiodataPannur}/>
+          <Route path="/Biodata2" component={BiodataIwan}/>
+          <Route path="/Contact" component={Contact}/>
         </Routes>
-      </BrowserRouter>
-    </div>
+    </Router>
   );
 }
 
